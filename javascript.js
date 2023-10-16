@@ -1,15 +1,46 @@
-let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
 
-for (let i = 1; i <= answer; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-        console.log("FizzBuzz");
-    } else if (i % 3 === 0) {
-        console.log("Fizz");
-    } else if (i % 5 === 0) {
-        console.log("Buzz");
-    } else {
-        console.log(i);
-    }
+const getUserChoice = prompt("Choose Rock, Paper, or Scissors.").toLowerCase();
+if (getUserChoice === "rock" || getUserChoice === "paper" || getUserChoice === "scissors") {
+    console.log("You chose: " + getUserChoice);
+} else {
+    console.log("Invalid choice, perhaps a typo? Please choose, rock, paper, or scissors without spaces.");
 }
 
-console.log("Hi");
+function getComputerChoice() {
+    const randomCompValue = Math.random();
+    if (randomCompValue < 0.33) {
+        return "rock";
+    } else if (randomCompValue < 0.66) {
+        return "paper";
+    } else {
+        return "scissors";
+    }
+}
+ 
+const computerSelection = getComputerChoice();
+
+const userSelection = getUserChoice;
+
+
+function playRound(userSelection, computerSelection) {
+    if (userSelection === computerSelection) {
+        return "It's a tie!";
+    } else if (
+        (userSelection === "rock" && computerSelection === "scissors") ||
+        (userSelection === "paper" && computerSelection === "rock") ||
+        (userSelection === "scissors" && computerSelection === "paper") 
+    ) {
+        return "You win!";
+    } else {
+        return "You lose!";
+    }
+
+}
+
+const roundResult = playRound(userSelection, computerSelection);
+console.log("Computer chose: " + computerSelection);
+console.log(roundResult);
+
+
+//for loop practice
+//for (win = 0; win = 5; win++)
