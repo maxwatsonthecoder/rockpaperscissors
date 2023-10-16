@@ -1,4 +1,11 @@
 
+let userWins = 0;
+let userLoses = 0;
+let ties = 0;
+
+for (let round = 1; round <= 5; round++) {
+   
+
 const getUserChoice = prompt("Choose Rock, Paper, or Scissors.").toLowerCase();
 if (getUserChoice === "rock" || getUserChoice === "paper" || getUserChoice === "scissors") {
     console.log("You chose: " + getUserChoice);
@@ -24,23 +31,38 @@ const userSelection = getUserChoice;
 
 function playRound(userSelection, computerSelection) {
     if (userSelection === computerSelection) {
+        ties++;
         return "It's a tie!";
+       
     } else if (
         (userSelection === "rock" && computerSelection === "scissors") ||
         (userSelection === "paper" && computerSelection === "rock") ||
         (userSelection === "scissors" && computerSelection === "paper") 
     ) {
+        userWins++;
         return "You win!";
     } else {
+        userLoses++;
         return "You lose!";
     }
 
 }
+console.log("Computer chose: " + computerSelection);
+
+
 
 const roundResult = playRound(userSelection, computerSelection);
-console.log("Computer chose: " + computerSelection);
 console.log(roundResult);
 
+}
 
-//for loop practice
-//for (win = 0; win = 5; win++)
+
+
+if (userWins > userLoses) {
+  console.log("You the win the game!");
+} else if (userWins < userLoses) {
+  console.log("The computer wins the game!");
+} else {
+  console.log("It's a tie!");
+}
+
