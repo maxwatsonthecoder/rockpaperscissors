@@ -6,7 +6,7 @@ let ties = 0;
 for (let round = 1; round <= 5; round++) {
    
 
-const getUserChoice = prompt("Choose Rock, Paper, or Scissors.").toLowerCase();
+// const getUserChoice = prompt("Choose Rock, Paper, or Scissors.").toLowerCase();
 if (getUserChoice === "rock" || getUserChoice === "paper" || getUserChoice === "scissors") {
     console.log("You chose: " + getUserChoice);
 } else {
