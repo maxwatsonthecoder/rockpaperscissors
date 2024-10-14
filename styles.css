@@ -1,12 +1,77 @@
-.container {
+body {
+    background: linear-gradient(#ffffff, #100101);
+    color: #ffffff;
+    background-size: cover;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 700px;
-    height: 500px;
+    height: 700px;
+}
+
+.player-select {
+    display: flex;
+}
+
+.user-choice {
+    width: 300px;
+    height: 200px;
     border: 5px solid red;
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    padding: 5px;
+    background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzRyMzYwb2g3ZHFhZjIyNzE2bzJkM3JxbzAzb2thNDN3aGJuNDZ3cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D0j8WOBCnAKjvkWDwb/giphy.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+}
+
+.comp-choice {
+    width: 300px;
+    height: 200px;
+    border: 5px solid red;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5px;
+    background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExenk5ZXY5dnIyODY0d2tmcmM4N2dmcWlzcWltdmNwcWtlaHdncTRqdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tz30dcgKE3GCTYpxol/giphy.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
 }
 
 button {
     background-color: blueviolet;
-}
+    border: 3px solid #f103f5;
+    border-style: outset;
+    width: 75px;
+    margin: 0 5px;
+
+} 
+
+/*
+
+choose gif:
+background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzRyMzYwb2g3ZHFhZjIyNzE2bzJkM3JxbzAzb2thNDN3aGJuNDZ3cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D0j8WOBCnAKjvkWDwb/giphy.gif");
+
+computer start gif:
+background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExenk5ZXY5dnIyODY0d2tmcmM4N2dmcWlzcWltdmNwcWtlaHdncTRqdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tz30dcgKE3GCTYpxol/giphy.gif");
+
+rock gif:
+background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXlsYXIxMzhiY2lycHcxa3Y2cGZ0eW5jZDQyZm85a2o0OGRkem84ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TejmLnMKgnmPInMQjV/giphy.gif");
+
+paper gif
+background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExanc0ODhua29oazdjdDJ6cjJ2cmloYnh2b2pvM3B4cXFha2JiNDJ2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2RoEgmvxXIvA5i/giphy.gif");
+
+scissors gif
+background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExanc0ODhua29oazdjdDJ6cjJ2cmloYnh2b2pvM3B4cXFha2JiNDJ2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2RoEgmvxXIvA5i/giphy.gif");
+
+you win
+background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExanc0ODhua29oazdjdDJ6cjJ2cmloYnh2b2pvM3B4cXFha2JiNDJ2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2RoEgmvxXIvA5i/giphy.gif");
+
+you lose
+background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExanc0ODhua29oazdjdDJ6cjJ2cmloYnh2b2pvM3B4cXFha2JiNDJ2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2RoEgmvxXIvA5i/giphy.gif");
+
+*/
