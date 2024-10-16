@@ -1,7 +1,15 @@
+// Use chooses button, triggers game starts. Comp selection, comparison, winner, 
+//increase points. Prompt user to pick again, repeat till 5 pts, announce winner.
+//each selection triggers corresponding GIF to display. Comp selection triggers
+//comp button to change css as if clicked. Game win triggers pop up with new game button.
+
 
 let userWins = 0;
 let userLoses = 0;
 let ties = 0;
+let userPoints = 0;
+let compPoints = 0;
+
 
 const rockBtn = document.getElementById(rock-btn)
 const paperBtn = document.getElementById(paper-btn)
@@ -73,7 +81,7 @@ for (let round = 1; round <= 5; round++) {
 }
 
 
-
+//need DOM events in place of console log. Need div or pop up.
 if (userWins > userLoses) {
   console.log("You the win the game!");
 } else if (userWins < userLoses) {
