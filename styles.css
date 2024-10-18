@@ -21,10 +21,14 @@ body {
     align-items:flex-start;
     justify-content: center;
     padding: 5px;
-    background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzRyMzYwb2g3ZHFhZjIyNzE2bzJkM3JxbzAzb2thNDN3aGJuNDZ3cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D0j8WOBCnAKjvkWDwb/giphy.gif");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50%;
+
+}
+
+#user-choice {
+    background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzRyMzYwb2g3ZHFhZjIyNzE2bzJkM3JxbzAzb2thNDN3aGJuNDZ3cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D0j8WOBCnAKjvkWDwb/giphy.gif");
 
 }
 
@@ -103,12 +107,12 @@ paper gif
 background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExanc0ODhua29oazdjdDJ6cjJ2cmloYnh2b2pvM3B4cXFha2JiNDJ2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2RoEgmvxXIvA5i/giphy.gif");
 
 scissors gif
-background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExanc0ODhua29oazdjdDJ6cjJ2cmloYnh2b2pvM3B4cXFha2JiNDJ2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2RoEgmvxXIvA5i/giphy.gif");
+background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHU3ajB4aXplN2dpbnpvMXV6ZzRyanVhYml4ZTFxc2F6b3gwZ2FzciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5xtDaruJgRm1QdFTvnW/giphy.gif");
 
 you win
-background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExanc0ODhua29oazdjdDJ6cjJ2cmloYnh2b2pvM3B4cXFha2JiNDJ2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2RoEgmvxXIvA5i/giphy.gif");
+background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzh4cmNqZHd0YWMzcnBycXl1a3d4OWM5cTRrdGY3cGJnZzZnb3dreiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/MeJc0UyMIPLKFhhPcA/giphy.gif");
 
 you lose
-background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExanc0ODhua29oazdjdDJ6cjJ2cmloYnh2b2pvM3B4cXFha2JiNDJ2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2RoEgmvxXIvA5i/giphy.gif");
+background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGxxNW81aTkxbDl0YjUwdml6bjB2amJibGlsa242cTBkYXF0bGduciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sRMPFaVQLGSw8/giphy-downsized-large.gif");
 
 */
