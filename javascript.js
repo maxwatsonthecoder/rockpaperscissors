@@ -1,3 +1,7 @@
+//still need to add points, ui announcement who wins each round, at top,
+//winner/loser gif to pop up. Finalize design so it's not an eyesore.
+
+
 let userWins = 0;
 let userLoses = 0;
 let ties = 0;
@@ -84,6 +88,7 @@ function getComputerChoice() {
 function playRound(userSelection, computerSelection) {
     if (userSelection === computerSelection) {
         ties++;
+        checkWinner();
         return "It's a tie!";
     } else if (
         (userSelection === "rock" && computerSelection === "scissors") ||
@@ -91,23 +96,32 @@ function playRound(userSelection, computerSelection) {
         (userSelection === "scissors" && computerSelection === "paper") 
     ) {
         userWins++;
+        checkWinner();
         return "You win!";
     } else {
         userLoses++;
+        checkWinner();
         return "You lose!";
     }
 
 }
 
+function checkWinner() {
+    if (userWins === 5) {
+        showPopup("You win the game! Click 'New Game' to play again.");
+        resetGame();
+      } else if (userLoses === 5) {
+        showPopup("The computer wins the game! Click 'New Game' to play again.");
+        resetGame();
+      }
+}
 
-//need DOM events in place of console log. Need div or pop up.
-// if (userWins > userLoses) {
-//   console.log("You the win the game!");
-// } else if (userWins < userLoses) {
-//   console.log("The computer wins the game!");
-// } else {
-//   console.log("It's a tie!");
-// }
+function resetGame() {
+    userWins = 0;
+    userLoses = 0;
+    ties = 0;
+}
+
 
 
 
