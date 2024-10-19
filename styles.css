@@ -52,8 +52,15 @@ button {
     border-style: outset;
     width: 75px;
     margin: 0 5px;
-
+    border-radius: 7px;
+    box-shadow: 2px 2px 10px 2px rgb(0, 0, 0, 0.24);
+    transition: transform 0.2s ease;
 } 
+
+button:active {
+    transform: scale(0.9);
+    box-shadow: 1px 1px 9px 1px rgb(0, 0, 0, 0.24);
+}
 
 
 .popup {
@@ -66,7 +73,6 @@ button {
     background-color: rgb(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-    /*z-index: 1000;*/
 }
 
 .popup-content {
@@ -88,31 +94,7 @@ button {
     border-style: outset;
     width: 150px;
     margin: auto;
-    border-radius: 5%;
+    border-radius: 7px;
 }
 
 
-/*
-
-choose gif:
-background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzRyMzYwb2g3ZHFhZjIyNzE2bzJkM3JxbzAzb2thNDN3aGJuNDZ3cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D0j8WOBCnAKjvkWDwb/giphy.gif");
-
-computer start gif:
-background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExenk5ZXY5dnIyODY0d2tmcmM4N2dmcWlzcWltdmNwcWtlaHdncTRqdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tz30dcgKE3GCTYpxol/giphy.gif");
-
-rock gif:
-background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXlsYXIxMzhiY2lycHcxa3Y2cGZ0eW5jZDQyZm85a2o0OGRkem84ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TejmLnMKgnmPInMQjV/giphy.gif");
-
-paper gif
-background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExanc0ODhua29oazdjdDJ6cjJ2cmloYnh2b2pvM3B4cXFha2JiNDJ2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2RoEgmvxXIvA5i/giphy.gif");
-
-scissors gif
-background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHU3ajB4aXplN2dpbnpvMXV6ZzRyanVhYml4ZTFxc2F6b3gwZ2FzciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5xtDaruJgRm1QdFTvnW/giphy.gif");
-
-you win
-background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzh4cmNqZHd0YWMzcnBycXl1a3d4OWM5cTRrdGY3cGJnZzZnb3dreiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/MeJc0UyMIPLKFhhPcA/giphy.gif");
-
-you lose
-background-image:url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGxxNW81aTkxbDl0YjUwdml6bjB2amJibGlsa242cTBkYXF0bGduciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sRMPFaVQLGSw8/giphy-downsized-large.gif");
-
-*/
