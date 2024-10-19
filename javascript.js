@@ -119,6 +119,7 @@ function playRound(userSelection, computerSelection) {
         ties++;
         checkWinner();
         gameResult.textContent = "It's a tie!"
+        return "It's a tie!"
     } else if (
         (userSelection === "rock" && computerSelection === "scissors") ||
         (userSelection === "paper" && computerSelection === "rock") ||
@@ -128,11 +129,13 @@ function playRound(userSelection, computerSelection) {
         userPoints.textContent = "Player Points: " + userWins;
         checkWinner();
         gameResult.textContent = capitalizeFirstLetter(userSelection) + " beats " + capitalizeFirstLetter(computerSelection) + ", you win!"
+        return "You win!"
     } else {
         userLoses++;
         compPoints.textContent = "Computer Points: " + userLoses;
         checkWinner();
         gameResult.textContent = capitalizeFirstLetter(computerSelection) + " beats " + capitalizeFirstLetter(userSelection) + ", you lose!"
+        return "You lose!"
     }
 
 }
@@ -153,6 +156,8 @@ function resetGame() {
     ties = 0;
     userPoints.textContent = "Player Points: ";
     compPoints.textContent = "Computer Points: ";
+    document.getElementById("user-choice").style.backgroundImage = "url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzRyMzYwb2g3ZHFhZjIyNzE2bzJkM3JxbzAzb2thNDN3aGJuNDZ3cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D0j8WOBCnAKjvkWDwb/giphy.gif')";
+    document.getElementById("comp-choice").style.backgroundImage = "url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExenk5ZXY5dnIyODY0d2tmcmM4N2dmcWlzcWltdmNwcWtlaHdncTRqdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tz30dcgKE3GCTYpxol/giphy.gif')";
 }
 
 
