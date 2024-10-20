@@ -10,23 +10,31 @@
   <div class="game-result">
     <h1 id="game-result"></h1>
   </div>
+  
   <div class ="player-select">
-
     <div class="user-choice" id="user-choice">
-      <button id="rock-btn" onclick="getUserChoice('rock')">Rock</button>
-      <button id ="paper-btn" onclick="getUserChoice('paper')">Paper</button>
-      <button id="scissors-btn" onclick="getUserChoice('scissors')">Scissors</button>
+
+      <div>
+        <button id="rock-btn" onclick="getUserChoice('rock')">Rock</button>
+        <button id ="paper-btn" onclick="getUserChoice('paper')">Paper</button>
+        <button id="scissors-btn" onclick="getUserChoice('scissors')">Scissors</button>
+      </div>
       <p id="user-points">Player Points: </p>
+
     </div>
 
     <div class="comp-choice" id="comp-choice">
-      <button id="comp-rock-btn">Rock</button>
-      <button id ="comp-paper-btn">Paper</button>
-      <button id="comp-scissors-btn">Scissors</button>
+      <div>
+        <button id="comp-rock-btn">Rock</button>
+        <button id ="comp-paper-btn">Paper</button>
+        <button id="comp-scissors-btn">Scissors</button>
+      </div>
       <p id="comp-points">Computer Points: </p>
+      
     </div>
 
   </div>
+
 
   <div id="popup" class="popup" style="display: none;">
       <div class="popup-content">
@@ -43,3 +51,27 @@
 <script src =javascript.js></script>
 
 </html>
+
+<!-- 
+
+<div class="player-container">
+  <div class="user-choice" id="user-choice">
+    <button id="rock-btn" onclick="getUserChoice('rock')">Rock</button>
+    <button id="paper-btn" onclick="getUserChoice('paper')">Paper</button>
+    <button id="scissors-btn" onclick="getUserChoice('scissors')">Scissors</button>
+  </div>
+  <div class="points" id="user-points-div">
+    <p id="user-points">Player Points: 0</p>
+  </div>
+</div>
+
+<div class="player-container">
+  <div class="comp-choice" id="comp-choice">
+    <button id="comp-rock-btn">Rock</button>
+    <button id="comp-paper-btn">Paper</button>
+    <button id="comp-scissors-btn">Scissors</button>
+  </div>
+  <div class="points" id="comp-points-div">
+    <p id="comp-points">Computer Points: 0</p>
+  </div>
+</div> -->

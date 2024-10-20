@@ -1,9 +1,12 @@
-// Finalize design so it's not an eyesore. Add label for which side is player.
-
-
 let userWins = 0;
 let userLoses = 0;
 let ties = 0;
+
+const Choices = {
+    ROCK: 'rock',
+    PAPER: 'paper',
+    SCISSORS: 'scissors'
+};
 
 const rockBtn = document.getElementById("rock-btn")
 const paperBtn = document.getElementById("paper-btn")
@@ -26,25 +29,22 @@ function hidePopup() {
 document.addEventListener('DOMContentLoaded', function() {
     showPopup('Welcome to Rock Paper Scissors! Click "New Game" to start.', "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWQyYTBnNnc3Y3ZsMWZjdWt5ZWtiNGUxNGVmaDZwaHJpbnd6Mnd6YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/25LbA5gcDNM5N7sHHy/giphy.gif");
     gameResult.textContent = "Rock, Paper, or Scissors?"
-    
-
 })
 
 function newGame() {
     hidePopup();
     gameResult.textContent = "Rock, Paper, or Scissors?"
-
 }
 
 
 function changeBackgroundImage(userSelection) {
     const userChoiceDiv = document.getElementById("user-choice");
     
-    if (userSelection === 'rock') {
+    if (userSelection === Choices.ROCK) {
         userChoiceDiv.style.backgroundImage = "url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXlsYXIxMzhiY2lycHcxa3Y2cGZ0eW5jZDQyZm85a2o0OGRkem84ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TejmLnMKgnmPInMQjV/giphy.gif')";
-    } else if (userSelection === 'paper') {
+    } else if (userSelection === Choices.PAPER) {
         userChoiceDiv.style.backgroundImage = "url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExanc0ODhua29oazdjdDJ6cjJ2cmloYnh2b2pvM3B4cXFha2JiNDJ2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2RoEgmvxXIvA5i/giphy.gif')";
-    } else if (userSelection === 'scissors') {
+    } else if (userSelection === Choices.SCISSORS) {
         userChoiceDiv.style.backgroundImage = "url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHU3ajB4aXplN2dpbnpvMXV6ZzRyanVhYml4ZTFxc2F6b3gwZ2FzciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5xtDaruJgRm1QdFTvnW/giphy.gif')";
     }
 }
@@ -63,22 +63,22 @@ function getUserChoice(userSelection) {
 
 function updateComputerBackground(computerSelection) {
     const compChoiceDiv = document.getElementById("comp-choice");
-    if (computerSelection === 'rock') {
+    if (computerSelection === Choices.ROCK) {
         compChoiceDiv.style.backgroundImage = "url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXlsYXIxMzhiY2lycHcxa3Y2cGZ0eW5jZDQyZm85a2o0OGRkem84ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TejmLnMKgnmPInMQjV/giphy.gif')";
-    } else if (computerSelection === 'paper') {
+    } else if (computerSelection === Choices.PAPER) {
         compChoiceDiv.style.backgroundImage = "url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExanc0ODhua29oazdjdDJ6cjJ2cmloYnh2b2pvM3B4cXFha2JiNDJ2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2RoEgmvxXIvA5i/giphy.gif')";
-    } else if (computerSelection === 'scissors') {
+    } else if (computerSelection === Choices.SCISSORS) {
         compChoiceDiv.style.backgroundImage = "url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHU3ajB4aXplN2dpbnpvMXV6ZzRyanVhYml4ZTFxc2F6b3gwZ2FzciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5xtDaruJgRm1QdFTvnW/giphy.gif')";
     }
 }
 
 function simulateComputerChoice(compSelection) {
     let compButton;
-    if (compSelection === 'rock') {
+    if (compSelection === Choices.ROCK) {
         compButton = document.getElementById("comp-rock-btn");
-    } else if (compSelection === 'paper') {
+    } else if (compSelection === Choices.PAPER) {
         compButton = document.getElementById("comp-paper-btn");
-    } else if (compSelection === 'scissors') {
+    } else if (compSelection === Choices.SCISSORS) {
         compButton = document.getElementById("comp-scissors-btn");
     }
     
@@ -92,11 +92,11 @@ function simulateComputerChoice(compSelection) {
 function getComputerChoice() {
     const randomCompValue = Math.random();
     if (randomCompValue < 0.33) {
-        compSelection = "rock";
+        compSelection = Choices.ROCK;
     } else if (randomCompValue < 0.66) {
-        compSelection = "paper";
+        compSelection = Choices.PAPER;
     } else {
-        compSelection = "scissors";
+        compSelection = Choices.SCISSORS;
     }
     simulateComputerChoice(compSelection);  
     return compSelection;
@@ -113,9 +113,9 @@ function playRound(userSelection, computerSelection) {
         gameResult.textContent = "It's a tie!"
         return "It's a tie!"
     } else if (
-        (userSelection === "rock" && computerSelection === "scissors") ||
-        (userSelection === "paper" && computerSelection === "rock") ||
-        (userSelection === "scissors" && computerSelection === "paper") 
+        (userSelection === Choices.ROCK && computerSelection === Choices.SCISSORS) ||
+        (userSelection === Choices.PAPER && computerSelection === Choices.ROCK) ||
+        (userSelection === Choices.SCISSORS && computerSelection === Choices.PAPER) 
     ) {
         userWins++;
         userPoints.textContent = "Player Points: " + userWins;
