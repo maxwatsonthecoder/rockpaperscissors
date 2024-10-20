@@ -1,5 +1,4 @@
 // Finalize design so it's not an eyesore. Add label for which side is player.
-// Reset GIFs at game startup.
 
 
 let userWins = 0;
@@ -27,6 +26,7 @@ function hidePopup() {
 document.addEventListener('DOMContentLoaded', function() {
     showPopup('Welcome to Rock Paper Scissors! Click "New Game" to start.', "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWQyYTBnNnc3Y3ZsMWZjdWt5ZWtiNGUxNGVmaDZwaHJpbnd6Mnd6YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/25LbA5gcDNM5N7sHHy/giphy.gif");
     gameResult.textContent = "Rock, Paper, or Scissors?"
+    
 
 })
 
@@ -36,15 +36,6 @@ function newGame() {
 
 }
 
-document.getElementById("rock-btn").addEventListener("click", function() {
-    changeBackgroundImage('rock');
-});
-document.getElementById("paper-btn").addEventListener("click", function() {
-    changeBackgroundImage('paper');
-});
-document.getElementById("scissors-btn").addEventListener("click", function() {
-    changeBackgroundImage('scissors');
-});
 
 function changeBackgroundImage(userSelection) {
     const userChoiceDiv = document.getElementById("user-choice");
@@ -63,6 +54,7 @@ function getUserChoice(userSelection) {
     const computerSelection = getComputerChoice();
     console.log("Computer chose: " + computerSelection);
     updateComputerBackground(computerSelection);
+    changeBackgroundImage(userSelection);
 
     const roundResult = playRound(userSelection, computerSelection);
     console.log(roundResult);
@@ -156,8 +148,14 @@ function resetGame() {
     ties = 0;
     userPoints.textContent = "Player Points: ";
     compPoints.textContent = "Computer Points: ";
-    document.getElementById("user-choice").style.backgroundImage = "url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzRyMzYwb2g3ZHFhZjIyNzE2bzJkM3JxbzAzb2thNDN3aGJuNDZ3cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D0j8WOBCnAKjvkWDwb/giphy.gif')";
-    document.getElementById("comp-choice").style.backgroundImage = "url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExenk5ZXY5dnIyODY0d2tmcmM4N2dmcWlzcWltdmNwcWtlaHdncTRqdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tz30dcgKE3GCTYpxol/giphy.gif')";
+    const userChoiceDiv = document.getElementById("user-choice");
+    const compChoiceDiv = document.getElementById("comp-choice");
+    
+    userChoiceDiv.style.backgroundImage = "none"; 
+    compChoiceDiv.style.backgroundImage = "none"; 
+    
+    userChoiceDiv.style.backgroundImage = "url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzRyMzYwb2g3ZHFhZjIyNzE2bzJkM3JxbzAzb2thNDN3aGJuNDZ3cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D0j8WOBCnAKjvkWDwb/giphy.gif')";
+    compChoiceDiv.style.backgroundImage = "url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExenk5ZXY5dnIyODY0d2tmcmM4N2dmcWlzcWltdmNwcWtlaHdncTRqdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tz30dcgKE3GCTYpxol/giphy.gif')";
 }
 
 
